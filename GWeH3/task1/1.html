@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Temperature</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="1.js" defer></script>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Temperature Converter</h1>
+    <form>
+      <label>
+        Temperature:<br>
+        <input type="text" id="temperature" placeholder="Enter in Celsium">
+      </label>
+      <button type="button" class="submit" onclick="showConverted()">Convert</button>
+    </form><br>
+    <label id="textLabel"></label>
+    <h1>Weather for your location</h1>
+    <button type="button" class="submit" id="get-location" onclick="getLocation()">Get my weather</button><br>
+    <label id="currentTemperature"></label><br>
+    <label id="currentWind"></label>
+  </div>
+</body>
+
+</html>
