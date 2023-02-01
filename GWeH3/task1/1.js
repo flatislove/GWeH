@@ -34,7 +34,8 @@ document.getElementById("get-location").addEventListener("click", async () => {
     )
     .catch((error) => {
       console.log(error);
-      document.getElementById("currentTemperature").innerHTML = "Something is wrong";
+      document.getElementById("currentTemperature").innerHTML =
+        "Something is wrong";
       document.getElementById("currentWind").innerHTML = "";
     });
 });
@@ -48,13 +49,18 @@ async function getWeatherByLocation(latitude, longitude) {
       const temperatureLocation = Number.parseFloat(
         data.current_weather.temperature
       );
-      document.getElementById("currentTemperature").innerHTML = `Outside temperature: ${data.current_weather.temperature} 
+      document.getElementById(
+        "currentTemperature"
+      ).innerHTML = `Outside temperature: ${data.current_weather.temperature} 
         C (${convertTemperatureFromCelsiusToFahrenheit(temperatureLocation)})`;
-      document.getElementById("currentWind").innerHTML = `Outside wind speed: ${data.current_weather.windspeed} m/s`;
+      document.getElementById(
+        "currentWind"
+      ).innerHTML = `Outside wind speed: ${data.current_weather.windspeed} m/s`;
     })
     .catch((error) => {
       console.log(error);
-      document.getElementById("currentTemperature").innerHTML ="Something is wrong";
+      document.getElementById("currentTemperature").innerHTML =
+        "Something is wrong";
       document.getElementById("currentWind").innerHTML = "";
     });
 }

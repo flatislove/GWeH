@@ -6,7 +6,8 @@ greetingButton.addEventListener("click", async () => {
     const greetingLine = `Hello, ${name}!`;
     document.getElementById("textLabel").innerHTML = greetingLine;
     console.log(greetingLine);
-    document.getElementById("status").innerHTML = "Waiting for DALL-E response(10-20 seconds)";
+    document.getElementById("status").innerHTML =
+      "Waiting for DALL-E response(10-20 seconds)";
     getDalleImageByName(name)
       .then((data) => {
         document.getElementById("status").innerHTML = "loading...";
@@ -15,7 +16,8 @@ greetingButton.addEventListener("click", async () => {
       })
       .catch((error) => {
         console.log(error);
-        document.getElementById("image").src = "https://cdn2.iconfinder.com/data/icons/network-and-communication/100/Bad_Request-512.png";
+        document.getElementById("image").src =
+          "https://cdn2.iconfinder.com/data/icons/network-and-communication/100/Bad_Request-512.png";
         document.getElementById("status").innerHTML = "-";
       });
   }
