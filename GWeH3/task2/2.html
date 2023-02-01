@@ -1,30 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Greeting</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="2.js" defer></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Greeting</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <script src="2.js" defer></script>
-</head>
-
-<body>
-  <div class="container">
-    <h1>Welcome</h1>
-    <form>
-      <label>
-        Enter your name:<br>
-        <input type="text" id="name" placeholder="Your name here">
-      </label>
-      <button type="button" class="submit" onclick="greeting()">Submit</button>
-    </form><br>
-    <label id="textLabel"></label>
-    <h1>Photo by name from DALL-E</h1>
-    <p id="status">-</p>
-    <img id="image" src="image.png" alt="Need to wait a bit">
-  </div>
-</body>
-
+  <body>
+    <div class="container">
+      <h1>Welcome</h1>
+      <form>
+        <label>
+          Enter your name:<br />
+          <input type="text" id="name" placeholder="Your name here" />
+        </label>
+        <button type="button" class="submit" id="greeting-button">
+          Submit
+        </button>
+      </form>
+      <br />
+      <label id="textLabel"></label>
+      <h1>Photo by name from DALL-E</h1>
+      <p id="status">-</p>
+      <img id="image" src="image.png" alt="Need to wait a bit" />
+    </div>
+  </body>
 </html>
