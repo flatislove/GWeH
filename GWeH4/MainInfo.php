@@ -22,11 +22,6 @@ class MainInfo
 
     }
 
-    public function getNameWork(): string
-    {
-        return $this->nameWork;
-    }
-
     public function getFirstname(): string
     {
         return $this->firstname;

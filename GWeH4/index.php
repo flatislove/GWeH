@@ -131,29 +131,21 @@ $arrayWork = array($firstWork, $secondWork, $thirdWork);
                 <h2 class="w3-text-grey w3-padding-16"><i
                             class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Опыт работы</h2>
 
-                <?php
-                foreach ($arrayWork as $work) {
-                    ?>
+                <?php foreach ($arrayWork as $work) : ?>
                     <div class="w3-container">
                         <h5 class="w3-opacity"><b><?= $work->getNameWork() ?> </b></h5>
                         <h6 class="w3-text-teal"><i
                                     class="fa fa-calendar fa-fw w3-margin-right"></i><?= $work->getStartDate() ?> -
-                            <?php
-                            if ($work->getEndDate() != null) {
+                            <?php if ($work->getEndDate() != null) :
                                 echo $work->getEndDate();
-                            } else {
-                                ?>
+                            else : ?>
                                 <span class="w3-tag w3-teal w3-round">Current</span>
-                                <?php
-                            }
-                            ?>
+                            <?php endif; ?>
                         </h6>
                         <p><?= $work->getDescription() ?></p>
                         <hr>
                     </div>
-                    <?php
-                }
-                ?>
+                <?php endforeach; ?>
             </div>
 
             <div class="w3-container w3-card w3-white">
